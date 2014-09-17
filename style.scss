@@ -1,0 +1,124 @@
+$size: 300;
+
+@-webkit-keyframes angelina-rotate {
+	0% {
+		transform: rotate(125deg);
+	}
+	100% {
+		transform: rotate(485deg);
+	}
+}
+
+@-webkit-keyframes angelina-working {
+	0% {
+		transform: tranlateY(0);
+	}
+	25% {
+		transform: translateY(0 - $size * 0.10 + px);
+	}
+	50% {
+		transform: translateY(0);
+	}
+}
+
+#face {
+	width: $size + px;
+	height: $size + px;
+	margin: 50px auto;
+	position: relative;
+
+	#outer-circle,
+	#inner-circle {
+		border-radius: 100%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+	}
+
+	#outer-circle {
+		width: $size + px;
+		height: $size + px;
+		background: #2b1887;
+		margin-top: 0 - $size / 2 + px;
+		margin-left: 0 - $size / 2 + px;
+	}
+
+	#inner-circle {
+		width: $size * 0.86 + px;
+		height: $size * 0.86 + px;
+		background: #FFF;
+		margin-top: 0 - ($size * 0.86) / 2 + px;
+		margin-left: 0 - ($size * 0.86) / 2 + px;
+	}
+
+	#space {
+		$spacesize: $size * 0.10;
+		width: $spacesize + px;
+		height: $spacesize + px;
+		background: #FFF;
+		position: absolute;
+		top: 0 - $spacesize * 0.10 + px;
+		left: 50%;
+		margin-left: 0 - $spacesize / 2 + px;
+		transform-origin: $spacesize / 2 + px $size / 2 + $spacesize * 0.10 + px;
+		transform: rotate(125deg);
+	}
+
+	.content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: $size * 0.86 + px;
+		height: $size * 0.86 + px;
+		line-height: $size * 0.86 + px;
+		text-align: center;
+		font-family: Arial, Verdana, sans-serif;
+		font-size: $size * 0.70 + px;
+		opacity: 0;
+		transition: opacity 1s;
+		color: #2b1887;
+
+		&#content-working {
+			line-height: $size * 0.50 + px;
+
+			.working-dot {
+				display: inline-block;
+				-webkit-animation: angelina-working 1s infinite;
+
+				&#working-dot-one {
+					-webkit-animation-delay: 0;	
+				}	
+				&#working-dot-two {
+					-webkit-animation-delay: .25s;	
+				}	
+				&#working-dot-three {
+					-webkit-animation-delay: .5s;	
+				}	
+			}			
+		}
+
+		&#content-question {
+
+		}
+	}
+
+	&.working {
+		#space {
+			-webkit-animation: angelina-rotate 1s 1;
+		}
+
+		.content#content-working {
+			opacity: 1;
+		}
+	}
+
+	&.question {
+		#space {
+			-webkit-animation: angelina-rotate 1s 1;
+		}
+
+		.content#content-question {
+			opacity: 1;
+		}
+	}
+}

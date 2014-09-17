@@ -1,0 +1,79 @@
+@-webkit-keyframes angelina-rotate {
+  0% {
+    transform: rotate(125deg); }
+  100% {
+    transform: rotate(485deg); } }
+@-webkit-keyframes angelina-working {
+  0% {
+    transform: tranlateY(0); }
+  25% {
+    transform: translateY(-30px); }
+  50% {
+    transform: translateY(0); } }
+#face {
+  width: 300px;
+  height: 300px;
+  margin: 50px auto;
+  position: relative; }
+  #face #outer-circle,
+  #face #inner-circle {
+    border-radius: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%; }
+  #face #outer-circle {
+    width: 300px;
+    height: 300px;
+    background: #2b1887;
+    margin-top: -150px;
+    margin-left: -150px; }
+  #face #inner-circle {
+    width: 258px;
+    height: 258px;
+    background: #FFF;
+    margin-top: -129px;
+    margin-left: -129px; }
+  #face #space {
+    width: 30px;
+    height: 30px;
+    background: #FFF;
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    margin-left: -15px;
+    transform-origin: 15px 153px;
+    transform: rotate(125deg); }
+  #face .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 258px;
+    height: 258px;
+    line-height: 258px;
+    text-align: center;
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 210px;
+    opacity: 0;
+    transition: opacity 1s;
+    color: #2b1887; }
+    #face .content#content-working {
+      line-height: 150px; }
+      #face .content#content-working .working-dot {
+        display: inline-block;
+        -webkit-animation: angelina-working 1s infinite; }
+        #face .content#content-working .working-dot#working-dot-one {
+          -webkit-animation-delay: 0; }
+        #face .content#content-working .working-dot#working-dot-two {
+          -webkit-animation-delay: .25s; }
+        #face .content#content-working .working-dot#working-dot-three {
+          -webkit-animation-delay: .5s; }
+  #face.working #space {
+    -webkit-animation: angelina-rotate 1s 1; }
+  #face.working .content#content-working {
+    opacity: 1; }
+  #face.question #space {
+    -webkit-animation: angelina-rotate 1s 1; }
+  #face.question .content#content-question {
+    opacity: 1; }
+
+/*# sourceMappingURL=style.css.map */

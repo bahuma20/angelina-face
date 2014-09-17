@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Angelinas Face</title>
+	<link rel="stylesheet" href="style.css">
+
+	<script src="jquery.min.js"></script>
+</head>
+<body>
+	<button id="none">None</button>
+	<button id="working">Working</button>
+	<button id="question">Question</button>
+	<div id="face">
+			<div id="outer-circle">
+				<div id="inner-circle">
+						<div class="content" id="content-empty">
+
+						</div>
+						<div class="content" id="content-working">
+							<span class="working-dot" id="working-dot-one">.</span><span class="working-dot" id="working-dot-two">.</span><span class="working-dot" id="working-dot-three">.</span>
+						</div>
+						<div class="content" id="content-question">
+							?
+						</div>
+				</div>
+				<div id="space"></div>
+			</div>
+	</div>
+
+	<script>
+		jQuery(document).ready(function($) {
+			$("button#none").click(function(event) {
+				$('#face').removeClass();
+			});
+
+			$("button#working").click(function(event) {
+				$("#face").removeClass();
+				$("#face").addClass('working');
+			});
+
+			$("button#question").click(function(event) {
+				$("#face").removeClass();
+				$("#face").addClass('question');
+			});
+		});
+	</script>
+</body>
+</html>
