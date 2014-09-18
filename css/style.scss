@@ -112,6 +112,10 @@ $size: 300;
 		&#content-question {
 			-webkit-animation: angelina-question 1s infinite;
 		}
+
+		&#content-locked {
+			font-size: 170px;
+		}
 	}
 
 	&.action {
@@ -120,7 +124,7 @@ $size: 300;
 		}
 	}
 
-	$actions: working question locked;
+	$actions: working question locked ok;
 
 	@each $action in $actions {
 		&.#{$action} {
