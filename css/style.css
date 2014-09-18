@@ -98,6 +98,22 @@
           top: 0;
           right: 0;
           transition: right 1s ease; }
+    #face .content#content-error {
+      font-size: 160px; }
+      #face .content#content-error span.fa-times {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        top: 24.99px; }
+        #face .content#content-error span.fa-times div.firstoverlay {
+          width: 35px;
+          height: 100%;
+          background: red;
+          position: absolute;
+          top: 0;
+          left: 42px;
+          transition: all 1s ease;
+          transform: rotate(-45deg); }
   #face.action #space {
     -webkit-animation: angelina-rotate 1s 1; }
   #face.working .content#content-working {
@@ -119,6 +135,12 @@
     -webkit-animation-delay: 1s;
     -webkit-animation-fill-mode: forwards; }
   #face.ok .content#content-ok {
+    opacity: 1; }
+  #face.ok #content-ok span.fa-check div.overlay {
+    -webkit-animation: angelina-ok 1s 1;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-fill-mode: forwards; }
+  #face.error .content#content-error {
     opacity: 1; }
   #face.ok #content-ok span.fa-check div.overlay {
     -webkit-animation: angelina-ok 1s 1;

@@ -146,6 +146,28 @@ $size: 300;
 				}
 			}
 		}
+
+		&#content-error {
+			font-size: 160px;
+
+			span.fa-times {
+				position: relative;
+				display: inline-block;
+				overflow: hidden;
+				top: $size * 0.0833 + px;
+
+				div.firstoverlay {
+					width: 35px;
+					height: 100%;
+					background: red;
+					position: absolute;
+					top: 0;
+					left: 42px;
+					transition: all 1s ease;
+					transform: rotate(-45deg);
+				}
+			}
+		}
 	}
 
 	&.action {
@@ -154,7 +176,7 @@ $size: 300;
 		}
 	}
 
-	$actions: working question locked ok;
+	$actions: working question locked ok error;
 
 	@each $action in $actions {
 		&.#{$action} {
