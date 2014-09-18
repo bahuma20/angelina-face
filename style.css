@@ -10,6 +10,13 @@
     transform: translateY(-30px); }
   50% {
     transform: translateY(0); } }
+@-webkit-keyframes angelina-question {
+  0% {
+    transform: scale(1); }
+  20% {
+    transform: scale(1.1); }
+  40% {
+    transform: scale(1); } }
 #face {
   width: 300px;
   height: 300px;
@@ -67,6 +74,8 @@
           -webkit-animation-delay: .25s; }
         #face .content#content-working .working-dot#working-dot-three {
           -webkit-animation-delay: .5s; }
+    #face .content#content-question {
+      -webkit-animation: angelina-question 1s infinite; }
   #face.action #space {
     -webkit-animation: angelina-rotate 1s 1; }
   #face.working .content#content-working {
