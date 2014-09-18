@@ -7,15 +7,7 @@ jQuery(document).ready(function($) {
 		}, 1000);
 	}
 
-	$("button#none").click(function(event) {
-		changeAction('none');
-	});
-
-	$("button#working").click(function(event) {
-		changeAction('working');
-	});
-
-	$("button#question").click(function(event) {
-		changeAction('question');
+	$("button").click(function(event) {
+		changeAction($(this).attr('id'));
 	});
 });

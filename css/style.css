@@ -78,9 +78,11 @@
       -webkit-animation: angelina-question 1s infinite; }
   #face.action #space {
     -webkit-animation: angelina-rotate 1s 1; }
-  #face.working .content#content-working {
+  #face.working #content-working {
     opacity: 1; }
-  #face.question .content#content-question {
+  #face.question #content-question {
+    opacity: 1; }
+  #face.locked #content-locked {
     opacity: 1; }
 
 /*# sourceMappingURL=style.css.map */

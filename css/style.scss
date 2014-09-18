@@ -120,15 +120,13 @@ $size: 300;
 		}
 	}
 
-	&.working {
-		.content#content-working {
-			opacity: 1;
-		}
-	}
+	$actions: working question locked;
 
-	&.question {
-		.content#content-question {
-			opacity: 1;
+	@each $action in $actions {
+		&.#{$action} {
+			#content-#{$action} {
+				opacity: 1;
+			}
 		}
 	}
 }
