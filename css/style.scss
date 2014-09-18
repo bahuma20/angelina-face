@@ -33,6 +33,16 @@ $size: 300;
 	}
 }
 
+@-webkit-keyframes angelina-ok {
+	0% {
+		right: 0;
+	}
+
+	100% {
+		right: -100%;
+	}
+}
+
 #face {
 	width: $size + px;
 	height: $size + px;
@@ -116,6 +126,26 @@ $size: 300;
 		&#content-locked {
 			font-size: 170px;
 		}
+
+		&#content-ok {
+			font-size: 160px;
+			span.fa-check {
+				position: relative;
+				display: inline-block;
+				overflow: hidden;
+				top: $size * 0.0833 + px;
+
+				div.overlay {
+					width: 100%;
+					height: 100%;
+					background: #FFF;
+					position: absolute;
+					top: 0;
+					right: 0;
+					transition: right 1s ease;
+				}
+			}
+		}
 	}
 
 	&.action {
@@ -128,8 +158,18 @@ $size: 300;
 
 	@each $action in $actions {
 		&.#{$action} {
-			#content-#{$action} {
+			.content#content-#{$action} {
 				opacity: 1;
+			}
+		}
+
+		&.ok {
+			#content-ok {
+				span.fa-check div.overlay {
+					-webkit-animation: angelina-ok 1s 1;
+					-webkit-animation-delay: 1s;
+					-webkit-animation-fill-mode: forwards;
+				}
 			}
 		}
 	}
