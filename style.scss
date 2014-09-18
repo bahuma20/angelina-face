@@ -102,21 +102,19 @@ $size: 300;
 		}
 	}
 
-	&.working {
+	&.action {
 		#space {
 			-webkit-animation: angelina-rotate 1s 1;
 		}
+	}
 
+	&.working {
 		.content#content-working {
 			opacity: 1;
 		}
 	}
 
 	&.question {
-		#space {
-			-webkit-animation: angelina-rotate 1s 1;
-		}
-
 		.content#content-question {
 			opacity: 1;
 		}

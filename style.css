@@ -67,12 +67,10 @@
           -webkit-animation-delay: .25s; }
         #face .content#content-working .working-dot#working-dot-three {
           -webkit-animation-delay: .5s; }
-  #face.working #space {
+  #face.action #space {
     -webkit-animation: angelina-rotate 1s 1; }
   #face.working .content#content-working {
     opacity: 1; }
-  #face.question #space {
-    -webkit-animation: angelina-rotate 1s 1; }
   #face.question .content#content-question {
     opacity: 1; }
 
