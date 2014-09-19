@@ -22,6 +22,16 @@
     right: 0; }
   100% {
     right: -100%; } }
+@-webkit-keyframes angelina-error-first {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(45deg); } }
+@-webkit-keyframes angelina-error-second {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(-45deg); } }
 #face {
   width: 300px;
   height: 300px;
@@ -98,53 +108,86 @@
           top: 0;
           right: 0;
           transition: right 1s ease; }
-    #face .content#content-error {
-      font-size: 160px; }
-      #face .content#content-error span.fa-times {
-        position: relative;
-        display: inline-block;
-        overflow: hidden;
-        top: 24.99px; }
-        #face .content#content-error span.fa-times div.firstoverlay {
-          width: 35px;
-          height: 100%;
-          background: red;
-          position: absolute;
-          top: 0;
-          left: 42px;
-          transition: all 1s ease;
-          transform: rotate(-45deg); }
+    #face .content#content-error span {
+      width: 180px;
+      background: #2b1887;
+      height: 34px;
+      display: block;
+      position: absolute;
+      top: 50%;
+      margin-top: -17px;
+      left: 50%;
+      margin-left: -90px;
+      border-radius: 5px; }
   #face.action #space {
     -webkit-animation: angelina-rotate 1s 1; }
   #face.working .content#content-working {
     opacity: 1; }
   #face.ok #content-ok span.fa-check div.overlay {
     -webkit-animation: angelina-ok 1s 1;
+    -webkit-animation-delay: 1s; }
+  #face.error #content-error span {
+    -webkit-animation-fill-mode: forwards;
     -webkit-animation-delay: 1s;
-    -webkit-animation-fill-mode: forwards; }
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1; }
+    #face.error #content-error span.first {
+      -webkit-animation-name: angelina-error-first; }
+    #face.error #content-error span.second {
+      -webkit-animation-name: angelina-error-second; }
   #face.question .content#content-question {
     opacity: 1; }
   #face.ok #content-ok span.fa-check div.overlay {
     -webkit-animation: angelina-ok 1s 1;
+    -webkit-animation-delay: 1s; }
+  #face.error #content-error span {
+    -webkit-animation-fill-mode: forwards;
     -webkit-animation-delay: 1s;
-    -webkit-animation-fill-mode: forwards; }
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1; }
+    #face.error #content-error span.first {
+      -webkit-animation-name: angelina-error-first; }
+    #face.error #content-error span.second {
+      -webkit-animation-name: angelina-error-second; }
   #face.locked .content#content-locked {
     opacity: 1; }
   #face.ok #content-ok span.fa-check div.overlay {
     -webkit-animation: angelina-ok 1s 1;
+    -webkit-animation-delay: 1s; }
+  #face.error #content-error span {
+    -webkit-animation-fill-mode: forwards;
     -webkit-animation-delay: 1s;
-    -webkit-animation-fill-mode: forwards; }
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1; }
+    #face.error #content-error span.first {
+      -webkit-animation-name: angelina-error-first; }
+    #face.error #content-error span.second {
+      -webkit-animation-name: angelina-error-second; }
   #face.ok .content#content-ok {
     opacity: 1; }
   #face.ok #content-ok span.fa-check div.overlay {
     -webkit-animation: angelina-ok 1s 1;
+    -webkit-animation-delay: 1s; }
+  #face.error #content-error span {
+    -webkit-animation-fill-mode: forwards;
     -webkit-animation-delay: 1s;
-    -webkit-animation-fill-mode: forwards; }
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1; }
+    #face.error #content-error span.first {
+      -webkit-animation-name: angelina-error-first; }
+    #face.error #content-error span.second {
+      -webkit-animation-name: angelina-error-second; }
   #face.error .content#content-error {
     opacity: 1; }
   #face.ok #content-ok span.fa-check div.overlay {
     -webkit-animation: angelina-ok 1s 1;
+    -webkit-animation-delay: 1s; }
+  #face.error #content-error span {
+    -webkit-animation-fill-mode: forwards;
     -webkit-animation-delay: 1s;
-    -webkit-animation-fill-mode: forwards; }
-
-/*# sourceMappingURL=style.css.map */
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1; }
+    #face.error #content-error span.first {
+      -webkit-animation-name: angelina-error-first; }
+    #face.error #content-error span.second {
+      -webkit-animation-name: angelina-error-second; }
