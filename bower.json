@@ -1,0 +1,7 @@
+{
+  "name": "angelina-face",
+  "version": "1.0.0",
+  "dependencies": {
+    "voice-elements": "~0.2.0"
+  }
+}
